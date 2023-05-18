@@ -1,14 +1,14 @@
 export class Client {
   constructor() {
-    this.Id = 0;
+    this.id = 0;
     this.nom = '';
     this.prenom = '';
-    this.adresse = '';
-    this.phone = '';
+    this.Adresse = '';
+    this.Phone = '';
   }
-  Id: Number;
+  id: Number;
   nom: String;
   prenom: String;
-  adresse: String;
-  phone: String;
+  Adresse: String;
+  Phone: String;
 }

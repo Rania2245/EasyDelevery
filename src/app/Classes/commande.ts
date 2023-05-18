@@ -1,10 +1,12 @@
 export class Commande {
   constructor() {
-    this.idC = 0;
+    this.idc = 0;
     this.DateCommande = new Date();
+    this.userId = '';
     this.prixTotale = 0;
   }
-  idC: Number;
+  idc: Number;
   DateCommande: Date;
+  userId: String;
   prixTotale: Number;
 }

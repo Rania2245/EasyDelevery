@@ -4,7 +4,7 @@
       <img
         src="assets/logo.png"
         height="50"
-        width="200"
+        width="100"
         alt="Delivery Service Logo"
         routerLink="/home"
         routerLinkActive="active"
@@ -33,15 +33,107 @@
             Accueil
           </a>
         </li>
+
         <li class="nav-item">
           <a
             class="nav-link"
             href="#"
             routerLink="/LogIn"
             routerLinkActive="active"
+            *ngIf="isLoggedIn && Role == 'ROLE_ADMIN'"
           >
             Compte
           </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/Livraison"
+            routerLinkActive="active"
+            *ngIf="isLoggedIn && Role == 'ROLE_ADMIN'"
+          >
+            Livraison
+          </a>
+        </li>
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/Fournisseur"
+            routerLinkActive="active"
+            *ngIf="isLoggedIn && Role == 'ROLE_ADMIN'"
+          >
+            Fournisseur
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/gestionLivreurs"
+            routerLinkActive="active"
+            *ngIf="isLoggedIn && Role == 'ROLE_ADMIN'"
+          >
+            Livreur
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/gestionLivraison"
+            routerLinkActive="active"
+            *ngIf="isLoggedIn && Role == 'ROLE_ADMIN'"
+          >
+            Bon De Livraison
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/gestionProduit"
+            routerLinkActive="active"
+            *ngIf="isLoggedIn && Role == 'ROLE_ADMIN'"
+          >
+            Produit
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/Compte"
+            routerLinkActive="active"
+            *ngIf="isLoggedIn && Role == 'ROLE_ADMIN'"
+          >
+            Compte
+          </a>
+        </li>
+
+        <li class="nav-item">
+          <a
+            class="nav-link"
+            href="#"
+            routerLink="/LogIn"
+            routerLinkActive="active"
+            *ngIf="!isLoggedIn"
+            >LogIn</a
+          >
+        </li>
+        <li class="nav-item" *ngIf="isLoggedIn">
+          <a
+            class="nav-link"
+            href="#"
+            (click)="logoutUser()"
+            routerLinkActive="active"
+            >Logout</a
+          >
         </li>
         <li class="nav-item">
           <a class="nav-link" href="#">

@@ -1,5 +1,6 @@
 import { NgModule } from '@angular/core';
 import { BrowserModule } from '@angular/platform-browser';
+import { HttpClientModule } from '@angular/common/http';
 
 import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
@@ -11,13 +12,19 @@ import { FooterComponent } from './Entities/footer/footer.component';
 import { HomeClientComponent } from './Entities/Client/home-client/home-client.component';
 import { LivraisonComponent } from './Entities/Client/livraison/livraison.component';
 import { HomeAdminComponent } from './Entities/Admin/home-admin/home-admin.component';
-import { NavbarAdminComponent } from './Entities/Admin/navbar-admin/navbar-admin.component';
+
 import { GestionLivreursComponent } from './Entities/Admin/gestion-livreurs/gestion-livreurs.component';
 import { GestionFournisseurComponent } from './Entities/Admin/gestion-fournisseur/gestion-fournisseur.component';
 import { GestionLivraisonComponent } from './Entities/Admin/gestion-livraison/gestion-livraison.component';
 import { GestionBanDeLivraisonComponent } from './Entities/Admin/gestion-ban-de-livraison/gestion-ban-de-livraison.component';
 import { GestionProduitComponent } from './Entities/Admin/gestion-produit/gestion-produit.component';
-import { HomeFournisseurComponent } from './Entities/Fournisseur/home-fournisseur/home-fournisseur.component';
+
+import { AjouterCommandeComponent } from './Fournisseur/ajouter-commande/ajouter-commande.component';
+
+import { CommandesComponent } from './Fournisseur/commandes/commandes.component';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
+import { SelectedBandComponent } from './Fournisseur/selected-band/selected-band.component';
+import { CreeCompteComponent } from './Entities/cree-compte/cree-compte.component';
 
 @NgModule({
   declarations: [
@@ -29,15 +36,27 @@ import { HomeFournisseurComponent } from './Entities/Fournisseur/home-fournisseu
     HomeClientComponent,
     LivraisonComponent,
     HomeAdminComponent,
-    NavbarAdminComponent,
+
     GestionLivreursComponent,
     GestionFournisseurComponent,
     GestionLivraisonComponent,
     GestionBanDeLivraisonComponent,
     GestionProduitComponent,
-    HomeFournisseurComponent,
+
+    AjouterCommandeComponent,
+
+    CommandesComponent,
+    SelectedBandComponent,
+    CreeCompteComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    HttpClientModule,
+    FormsModule,
+    ReactiveFormsModule,
+    HttpClientModule,
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })
